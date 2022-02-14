@@ -1,7 +1,8 @@
 scene {
-  width: 1920px;
-  height: 1080px;
+  width: 1280px;
+  height: 720px;
   display: inline-block;
+  position: absolute;
 }
 
 html, body {
@@ -33,7 +34,7 @@ speech {
 
 speech name{
   font-size: 4vh;
-  color: lightcyan;
+  color: lightblue;
   margin-left: 2%;
 }
 
@@ -44,12 +45,54 @@ speech content {
   margin-left: 2%;
 }
 
-dialog[class="gameMenu"] {
-  background-color: white;
-  background-image: none;
-  border: 3px solid lightblue;
+.gameMenu {
+  border: none;
+  background-color: transparent;
+  padding-top: 20px;
+}
+
+.gameMenu button {
+  border: none;
+  color: white;
+  background-color: rgba(11, 14, 19, 0.9);
+  border-radius: 5px;
+  margin: 0 10px 0 10px;
+  padding: 10px;
+  font-size: 0.8vmax;
+}
+
+.gameMenu button:hover {
+  background-color: lightgray;
+  cursor: pointer;
 }
 
 speech.Player {
   color: lightgreen;
+}
+
+speech.Leyah name {
+  color: lightcoral;
+}
+
+.credits {
+  position: absolute;
+  background-color: rgba(20, 22, 24, 1);;
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 30px;
+  width: 35%;
+  height: 35%;
+  padding-top: 80px;
+  font-size: 2vh;
+}
+
+.credits table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.credits td {
+  text-align: left;
+  padding: 10px 100px;
 }

@@ -1,4 +1,10 @@
 declare namespace Template {
+    function Intro(): ƒS.SceneReturn;
+}
+declare namespace Template {
+    function showCredits(): void;
+}
+declare namespace Template {
     export import ƒ = FudgeCore;
     export import ƒS = FudgeStory;
     let transition: {
@@ -12,11 +18,23 @@ declare namespace Template {
             alpha: string;
             edge: number;
         };
+        blurr: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
+        wet: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
     };
     let sound: {
         backgroundTheme: string;
+        dream: string;
         clickGeräusch: string;
         sleep: string;
+        crying: string;
     };
     let locations: {
         Schlafzimmer: {
@@ -48,27 +66,14 @@ declare namespace Template {
         narrator: {
             name: string;
         };
-        Protagonist: {
+        Leyah: {
             name: string;
             origin: ƒ.ORIGIN2D;
             pose: {
                 happy: string;
             };
-            ErsterZeuge: {
-                name: string;
-                origin: ƒ.ORIGIN2D;
-                pose: {
-                    angry: string;
-                    fear: string;
-                    upset: string;
-                    neutral: string;
-                };
-            };
         };
     };
     let gameMenu: ƒS.Menu;
     let menu: boolean;
-}
-declare namespace Template {
-    function Intro(): ƒS.SceneReturn;
 }

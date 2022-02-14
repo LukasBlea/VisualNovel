@@ -9,22 +9,34 @@ namespace Template {
     clock: {
       duration: 2,
       alpha: "./Images/Transitions/puzzle.png",   //Pfad zum Image der Transition 
-      edge: 3,                                  //Härtegrad der Transition
+      edge: 3,                                    //Härtegrad der Transition
     },
     curtains: {
       duration: 1,
       alpha: "./Images/Transitions/curtains.png",
+      edge: 2,
+    },
+    blurr: {
+      duration: 1,
+      alpha: "./Images/Transitions/blurr.png",
+      edge: 2,
+    },
+    wet: {
+      duration: 1,
+      alpha: "./Images/Transitions/wet.jpg",
       edge: 2,
     }
   };
 
   export let sound = {
   // music
-    backgroundTheme: "./Sounds/Quiet.mp3",  //MP3 meist das beste Format für Browser
+    backgroundTheme: "./Sounds/Quiet.mp3",       //MP3 meist das beste Format für Browser
+    dream: "./Sounds/Dream.mp3",
 
   // Sound
     clickGeräusch: "./Sounds/Click.mp3",  
     sleep: "./Sounds/Sleeping.wav",
+    crying: "./Sounds/Crying.wav"
   };
 
   // Backgrounds
@@ -61,34 +73,19 @@ namespace Template {
     narrator: {
       name: "???"
     },
-    Protagonist: {
-      name: "Haru", //CSS Gestaltungs Name
+    Leyah: {
+      name: "Leyah",                                               //CSS Gestaltungs Name
       origin: ƒS.ORIGIN.BOTTOMCENTER,
       pose: {
         happy: "./Images/Characters/HaruChill.png",
       },
-    ErsterZeuge: {
-      name: "Harvey",
-      origin: ƒS.ORIGIN.BOTTOMCENTER,
-      pose: {
-        angry: "./Characters/Harvey/Angry.png",
-        fear: "./Characters/Harvey/Fear.png",
-        upset: "./Characters/Harvey/Upset.png",
-        neutral: "./Characters/Harvey/Neutral.png",
-      },
-      }
     }
   }
 
   let inGameMenu = {
     save: "Save",
     load: "Load",
-    close: "Close",
-    turnUpVolume: "+",
-    turndownVolume: "-",
     credits: "Credits",
-    about: "About",
-    open: "Open"
   };
 
   export let gameMenu: ƒS.Menu;
@@ -102,14 +99,8 @@ namespace Template {
       case inGameMenu.load:
         await ƒS.Progress.load();
         break;
-      case inGameMenu.close:
-        gameMenu.close();
-        break;
-      case inGameMenu.open:
-        gameMenu.open();
-        break;
       case inGameMenu.credits:
-        //showCredits();
+        showCredits();
         break;
     }
   }
@@ -147,7 +138,7 @@ namespace Template {
       ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
 
     let scenes: ƒS.Scenes = [
-      { scene: Intro, name: "Scene" }
+      { scene: Intro, name: "Beginning" }
     ];
 
     let uiElement: HTMLElement = document.querySelector("[type=interface]");

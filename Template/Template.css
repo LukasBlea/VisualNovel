@@ -1,5 +1,55 @@
 scene {
-  width: 1280px;
-  height: 720px;
+  width: 1920px;
+  height: 1080px;
   display: inline-block;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  overflow: hidden;
+  font-family: 'Gill Sans MT', sans-serif;
+}
+  
+canvas {
+  width: 100%;
+  height: 100%;
+}
+  
+speech {
+  position: absolute;
+  bottom: 0px;
+  left: 15%;
+  color: white;
+  background-color: rgba(11, 14, 19, 0.9);
+  width: 70%;
+  height: 20vh;
+  border: 5px solid;
+  border-radius: 10px;
+}
+
+speech name{
+  font-size: 4vh;
+  color: lightcyan;
+  margin-left: 2%;
+}
+
+speech content {
+  font-size: 2.5vh;
+  color: white;
+  display: block;
+  margin-left: 2%;
+}
+
+dialog[class="gameMenu"] {
+  background-color: white;
+  background-image: none;
+  border: 3px solid lightblue;
+}
+
+speech.Player {
+  color: lightgreen;
 }

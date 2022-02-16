@@ -76,7 +76,7 @@ speech.Leyah name {
 
 .credits {
   position: absolute;
-  background-color: rgba(20, 22, 24, 1);;
+  background-color: rgba(20, 22, 24, 1);
   color: white;
   text-align: center;
   border: none;
@@ -95,4 +95,27 @@ speech.Leyah name {
 .credits td {
   text-align: left;
   padding: 10px 100px;
+}
+
+.FirstDecisions {
+  background: transparent;
+  border: none; 
+}
+
+.FirstDecisions button {
+  font-size: 0.8vw;
+  height: 150px;
+  width: 300px;
+  background-color: rgba(20, 22, 24, 1);
+  color: white;
+  margin: 100px;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.FirstDecisions button:hover {
+  background-color: lightgreen;
+  color: rgba(20, 22, 24, 1);
+  cursor: pointer;
 }

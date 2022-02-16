@@ -29,44 +29,71 @@ namespace Template {
   };
 
   export let sound = {
-  // music
+    // music
     backgroundTheme: "./Sounds/Quiet.mp3",       //MP3 meist das beste Format für Browser
     dream: "./Sounds/Dream.mp3",
+    keyroom: "./Sounds/Keyroom.mp3",
+    depression: "./Sounds/Depression.mp3",
+    ending: "./Sounds/Ending.mp3",
 
-  // Sound
-    clickGeräusch: "./Sounds/Click.mp3",  
+    // Sound
+    clickGeräusch: "./Sounds/Click.mp3",
     sleep: "./Sounds/Sleeping.wav",
-    crying: "./Sounds/Crying.wav"
+    crying: "./Sounds/Crying.wav",
+    rumble: "./Sounds/Rumble.wav",
+    laughing: "./Sounds/Laughing.mp3",
+    breathing: "./Sounds/Heavy_breathing.wav"
   };
 
   // Backgrounds
   export let locations = {
     Schlafzimmer: {
       name: "Schreibtisch",
-      background: "./Images/Background/Computer_Room.png",
+      background: "./Images/Background/Computer_Room.png"
     },
     Bed: {
       name: "Bett",
-      background: "./Images/Background/Bed.png",
+      background: "./Images/Background/Bed.png"
     },
     DreamStart: {
       name: "Blackscreen",
-      background: "./Images/Background/Blackscreen.png",
+      background: "./Images/Background/Blackscreen.png"
     },
     Doorway: {
       name: "Traumtür",
-      background: "./Images/Background/Door.png",
+      background: "./Images/Background/Door.png"
     },
-    Writing: {
-      name: "Warning",
-      background: "./Images/Background/Writing_Dream.png"
-    }
+    WoIstSchluessel: {
+      name: "WoIstSchluessel",
+      background: "./Images/Background/WoIstSchluessel.png"
+    },
+    DoorCloseup: {
+      name: "DoorCloseup",
+      background: "./Images/Background/Door_closeup.png"
+    },
+    GoodEnding: {
+      name: "GoodEnding",
+      background: "./Images/Background/GoodEnding.png"
+    },
+    BadEnding: {
+      name: "BadEnding",
+      background: "./Images/Background/BadEnding.png"
+    },
+    OpenDoor: {
+      name: "OpenDoor",
+      background: "./Images/Background/OpenDoor.png"
+    },
   };
 
   // Spielprozess speichern, Name des Spielers behalten
   export let dataForSave = {
     namePlayer: "",
-    score: 0
+    score: 0,
+    talkedToLeyah: false,
+    backToLeyah: false,
+    amTheKey: false,
+    sayNoToLeyah: false,
+    slowStart: false,
   }
 
   export let characters = {
@@ -76,9 +103,6 @@ namespace Template {
     Leyah: {
       name: "Leyah",                                               //CSS Gestaltungs Name
       origin: ƒS.ORIGIN.BOTTOMCENTER,
-      pose: {
-        happy: "./Images/Characters/HaruChill.png",
-      },
     }
   }
 
@@ -138,7 +162,13 @@ namespace Template {
       ƒS.Menu.create(inGameMenu, buttonFunctionalities, "gameMenu");
 
     let scenes: ƒS.Scenes = [
-      { scene: Intro, name: "Beginning" }
+      { scene: Intro, name: "Beginning" },
+      { id: "WoIstSchluessel", scene: WoIstSchluessel, name: "WoIstSchluessel" },
+      { id: "TalkingToLeyah", scene: TalkingToLeyah, name: "TalkingToLeyah" },
+      { id: "LeyahBackground", scene: LeyahBackground, name: "LeyahBackground" },
+      { id: "SlowStart", scene: SlowStart, name: "SlowStart" },
+      { id: "Finale", scene: Finale, name: "Finale" }
+
     ];
 
     let uiElement: HTMLElement = document.querySelector("[type=interface]");

@@ -5,6 +5,12 @@ declare namespace Template {
     function showCredits(): void;
 }
 declare namespace Template {
+    function Finale(): ƒS.SceneReturn;
+}
+declare namespace Template {
+    function LeyahBackground(): ƒS.SceneReturn;
+}
+declare namespace Template {
     export import ƒ = FudgeCore;
     export import ƒS = FudgeStory;
     let transition: {
@@ -32,9 +38,15 @@ declare namespace Template {
     let sound: {
         backgroundTheme: string;
         dream: string;
+        keyroom: string;
+        depression: string;
+        ending: string;
         clickGeräusch: string;
         sleep: string;
         crying: string;
+        rumble: string;
+        laughing: string;
+        breathing: string;
     };
     let locations: {
         Schlafzimmer: {
@@ -53,7 +65,23 @@ declare namespace Template {
             name: string;
             background: string;
         };
-        Writing: {
+        WoIstSchluessel: {
+            name: string;
+            background: string;
+        };
+        DoorCloseup: {
+            name: string;
+            background: string;
+        };
+        GoodEnding: {
+            name: string;
+            background: string;
+        };
+        BadEnding: {
+            name: string;
+            background: string;
+        };
+        OpenDoor: {
             name: string;
             background: string;
         };
@@ -61,6 +89,11 @@ declare namespace Template {
     let dataForSave: {
         namePlayer: string;
         score: number;
+        talkedToLeyah: boolean;
+        backToLeyah: boolean;
+        amTheKey: boolean;
+        sayNoToLeyah: boolean;
+        slowStart: boolean;
     };
     let characters: {
         narrator: {
@@ -69,11 +102,17 @@ declare namespace Template {
         Leyah: {
             name: string;
             origin: ƒ.ORIGIN2D;
-            pose: {
-                happy: string;
-            };
         };
     };
     let gameMenu: ƒS.Menu;
     let menu: boolean;
+}
+declare namespace Template {
+    function SlowStart(): ƒS.SceneReturn;
+}
+declare namespace Template {
+    function TalkingToLeyah(): ƒS.SceneReturn;
+}
+declare namespace Template {
+    function WoIstSchluessel(): ƒS.SceneReturn;
 }

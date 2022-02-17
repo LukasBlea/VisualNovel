@@ -148,6 +148,7 @@ namespace Template {
       case leyahChoice.iSayWait:
         return "LeyahBackground"
       case leyahChoice.iSayNothing:
+        dataForSave.sayNoToLeyah = true;
         return "Finale"
     }
   }

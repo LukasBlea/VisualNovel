@@ -11,6 +11,7 @@ namespace Template {
       ƒS.Sound.fade(sound.histheme, 0.8, 2, true);
       let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(3)])   
       await signalDelay();
+      await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardRechts, OOBleftToRight()); 
       await ƒS.Speech.tell(dataForSave.namePlayer, "Leyah hörst du das???");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Wir haben nicht mehr viel Zeit!");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Warum hast du's mir nicht gesagt Leyah?");
@@ -57,6 +58,7 @@ namespace Template {
     await ƒS.update(0); 
     ƒS.Sound.fade(sound.dream, 0, 0.5, false);
     ƒS.Sound.fade(sound.histheme, 0.4, 2, true);
+    await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardRechts, OOBleftToRight()); 
     await ƒS.Speech.tell(characters.Leyah, "...........");
     let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(3)])   
     await signalDelay();
@@ -85,6 +87,7 @@ namespace Template {
     await ƒS.Speech.tell(dataForSave.namePlayer, "Ob das wohl normal ist?");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Ich frage mich, wann dieses Gefühl der leere endlich weichen wird.");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Was könnte dieses Gefühl verursachen? Irgendwann muss ich auf eine Lösung kommen...");
+    ƒS.Character.hideAll();
     await ƒS.Location.show(locations.BadEnding); 
     await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);
     await ƒS.update(0); 

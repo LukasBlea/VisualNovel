@@ -10,7 +10,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       await ƒS.Location.show(locations.WoIstSchluessel);
       await ƒS.update(transition.lines.duration, transition.lines.alpha, transition.lines.edge);
       await ƒS.update(0);
-      await signalDelay();
+      await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardLinks, OOBrightToLeft());    
       await ƒS.Speech.tell(dataForSave.namePlayer, "Es scheint so als hätte Leyah recht...ich sehe hier ein blaues Licht.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Allerdings ist diese Steintafel echt gruselig...sieht irgendwie verrückt aus.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Und es scheint wirklich nicht das erste mal zu sein, dass ich nach einem Schlüssel für ihre Tür gesucht habe.");
@@ -31,6 +31,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       switch (thirdDialougeElement) {
         case askLeyah.iSayGo:
           dataForSave.backToLeyah = true;
+          ƒS.Character.hideAll();
           return "TalkingToLeyah"
         case askLeyah.iSayWait:
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ich werde schon selbst eine Antwort finden.");
@@ -80,6 +81,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ich kann etwas hören...es wird langsam lauter und lauter");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ein ungutes Gefühl macht sich in mir breit...ich weiß, dass ich nicht viel länger hier bleiben kann.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "ICH KOMME LEYAH! DU BIST GLEICH FREI!");
+          ƒS.Character.hideAll();
           dataForSave.amTheKey = true;
           return "Finale"
       }
@@ -98,6 +100,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       await ƒS.Location.show(locations.WoIstSchluessel);
       await ƒS.update(transition.wet.duration, transition.wet.alpha, transition.wet.edge);
       await ƒS.update(0);
+      await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardLinks, OOBrightToLeft());    
       await ƒS.Speech.tell(dataForSave.namePlayer, "Wow, was ist das denn für ein Ort?");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Hier steht eine Steintafel.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Wo ist der Schlüssel???");
@@ -124,6 +127,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       await ƒS.Speech.tell(dataForSave.namePlayer, "KEINE SORGE DU BIST NICHT ALLEINE.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "ICH WERDE DEM KLANG DEINER STIMME FOLGEN, OK? ICH KOMME ZU DIR, DU MUSST KEINE ANGST HABEN.");
       dataForSave.slowStart = true;
+      ƒS.Character.hideAll();
       return "SlowStart"
 
       // Protagonist hat zu diesem Zeitpunkt noch keine Ahnung von einem Schlüssel. Wie geht es hier weiter? Bogen zur ersten Begegnung mit Leyah?

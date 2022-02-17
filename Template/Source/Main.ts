@@ -116,8 +116,98 @@ namespace Template {
     Leyah: {
       name: "Leyah",                                               //CSS Gestaltungs Name
       origin: ƒS.ORIGIN.BOTTOMCENTER,
+    },
+    Protagonist: {
+      name: dataForSave.namePlayer,
+      origin: ƒS.ORIGIN.BOTTOMCENTER,
+      pose: {
+        huh: "./Images/Characters/huh.png",
+        abscent: "./Images/Characters/abscent.png",
+        thinking: "./Images/Characters/thinking.png",
+        standardLinks: "./Images/Characters/standard_links.png",
+        standardRechts: "./Images/Characters/standard_rechts.png",
+      }
     }
   }
+
+  export function leftToRight(): ƒS.AnimationDefinition {
+    return {
+      start: {
+        translation: ƒS.positionPercent(30, 100),
+      },
+      end: {
+        translation: ƒS.positionPercent(70, 100),
+      },
+      duration: 2,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+
+  export function rightToLeft(): ƒS.AnimationDefinition {
+    return {
+      start: {
+        translation: ƒS.positionPercent(70, 100),
+      },
+      end: {
+        translation: ƒS.positionPercent(20, 100),
+      },
+      duration: 2,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+
+  export function ExitToLeftt(): ƒS.AnimationDefinition {
+    return {
+      start: {
+        translation: ƒS.positionPercent(20, 100),
+      },
+      end: {
+        translation: ƒS.positionPercent(-40, 100),
+      },
+      duration: 2,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+
+  export function OOBrightToLeft(): ƒS.AnimationDefinition {
+    return {
+      start: {
+        translation: ƒS.positionPercent(140, 100),
+      },
+      end: {
+        translation: ƒS.positionPercent(35, 100),
+      },
+      duration: 2,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+
+  export function OOBleftToRight(): ƒS.AnimationDefinition {
+    return {
+      start: {
+        translation: ƒS.positionPercent(-45, 100),
+      },
+      end: {
+        translation: ƒS.positionPercent(65, 100),
+      },
+      duration: 2,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+
+  export function ExitToRight(): ƒS.AnimationDefinition {
+    return {
+      start: {
+        translation: ƒS.positionPercent(70, 100),
+      },
+      end: {
+        translation: ƒS.positionPercent(120, 100),
+      },
+      duration: 2,
+      playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE,
+    };
+  }
+
 
   let inGameMenu = {
     save: "Save",

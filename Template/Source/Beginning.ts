@@ -25,15 +25,16 @@ namespace Template {
     ƒS.Sound.fade(sound.backgroundTheme, 0.2, 2, true);
     await ƒS.Location.show(locations.Schlafzimmer);
     await ƒS.update(transition.wirbel.duration, transition.wirbel.alpha, transition.wirbel.edge);
-    // await ƒS.Character.show(characters.Protagonist, characters.Protagonist.pose.happy, ƒS.positionPercent(70, 100));                           // Happy Haru mit Koordinaten auf Screen
-    await ƒS.update(0);                                                                                                                        // Sekunden
+    await ƒS.update(0);              
+    await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardLinks, OOBrightToLeft());                                                                                                  
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0000);
-    console.log(dataForSave.backToLeyah);
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0001);
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0002);
+    ƒS.Character.hideAll();
     await ƒS.Location.show(locations.Bed);
     await ƒS.update(transition.wet.duration, transition.wet.alpha, transition.wet.edge);
     await ƒS.update(0);   
+    await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardRechts, OOBleftToRight());  
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0003);
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0004);
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0005);
@@ -42,6 +43,7 @@ namespace Template {
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0006);
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0007);  
     ƒS.Sound.play(sound.sleep, 1, false); 
+    ƒS.Character.hideAll();
     await ƒS.Location.show(locations.DreamStart); 
     await signalDelay();
     await ƒS.update(transition.wirbel.duration, transition.wirbel.alpha, transition.wirbel.edge);
@@ -58,14 +60,11 @@ namespace Template {
     await ƒS.Speech.tell(dataForSave.namePlayer, text.narrator.T0013);    
     await ƒS.Speech.tell(dataForSave.namePlayer, text.narrator.T0014);  
     await ƒS.Speech.tell(dataForSave.namePlayer, " ...was sollte ich wohl tun?", true, "Player");        // CSS Klasse "Player"
-
     let firstDialougeElementOptions = {
       iSayGo: "Ich kann kaum was sehen, aber werde mich nach vorne wagen!",
       iSayWait: "Ich möchte nicht laufen...man kann gar nichts sehen!",
     };
-
     let firstDialougeElement = await ƒS.Menu.getInput(firstDialougeElementOptions, "FirstDecisions");
-
     switch (firstDialougeElement) {
       case firstDialougeElementOptions.iSayGo:
         return "TalkingToLeyah"

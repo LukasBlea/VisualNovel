@@ -3,6 +3,8 @@ namespace Template {
     await ƒS.Location.show(locations.DoorCloseup);
     await ƒS.update(transition.wet.duration, transition.wet.alpha, transition.wet.edge);
     await ƒS.update(0);
+    await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardLinks, OOBrightToLeft()); 
+    await ƒS.update(0);                        
     await ƒS.Speech.tell(characters.Leyah, "Etwas über mich erzählen?");
     await ƒS.Speech.tell(characters.Leyah, "Du musst immer noch müde sein! Hahaha.");
     ƒS.Sound.fade(sound.laughing, 0.4, 1, false);
@@ -31,10 +33,12 @@ namespace Template {
           await ƒS.Speech.tell(characters.Leyah, "Laufe bis du ein blaues Licht siehst.");
           await ƒS.Speech.tell(characters.Leyah, "Dort scheint ein Ort zu sein welcher dir helfen kann den Schlüssel zu finden.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Blaues Licht sagst du? Ich werde danach ausschau halten!");
+          ƒS.Character.hideAll()
           dataForSave.talkedToLeyah = true;
           return "WoIstSchluessel"
         case leyahChoice.iSayNo:
           dataForSave.sayNoToLeyah = true;
+          ƒS.Character.hideAll()
           return "Finale"
       }
     } else {

@@ -116,7 +116,24 @@ declare namespace Template {
             name: string;
             origin: ƒ.ORIGIN2D;
         };
+        Protagonist: {
+            name: string;
+            origin: ƒ.ORIGIN2D;
+            pose: {
+                huh: string;
+                abscent: string;
+                thinking: string;
+                standardLinks: string;
+                standardRechts: string;
+            };
+        };
     };
+    function leftToRight(): ƒS.AnimationDefinition;
+    function rightToLeft(): ƒS.AnimationDefinition;
+    function ExitToLeftt(): ƒS.AnimationDefinition;
+    function OOBrightToLeft(): ƒS.AnimationDefinition;
+    function OOBleftToRight(): ƒS.AnimationDefinition;
+    function ExitToRight(): ƒS.AnimationDefinition;
     let gameMenu: ƒS.Menu;
     let menu: boolean;
 }

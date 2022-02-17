@@ -9,6 +9,7 @@ namespace Template {
       ƒS.Sound.fade(sound.dream, 0.2, 2, false);
       await ƒS.update(transition.wet.duration, transition.wet.alpha, transition.wet.edge);
       await ƒS.update(0);
+      await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardLinks, OOBrightToLeft()); 
       await ƒS.Speech.tell(dataForSave.namePlayer, "Hey Leyah, ich bin wieder da!");
       await ƒS.Speech.tell(characters.Leyah, "Konntest du den Schlüssel finden?");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Nein den Schlüssel konnte ich leider nicht finden, allerdings eine Steintafel mit Schrift versehen...");
@@ -81,10 +82,12 @@ namespace Template {
           await ƒS.Speech.tell(dataForSave.namePlayer, "(Ich fühlte mich nicht mehr wie ein Mensch mit eigenen Bedürfnissen.)");
           await ƒS.Speech.tell(dataForSave.namePlayer, "(Nein...selbst jetzt fällt es mir noch schwer mich als einen Menschen zu sehen, der es Wert ist am Leben zu sein.)");
           await ƒS.Speech.tell(dataForSave.namePlayer, "(Jetzt ist alles zu spät. Ich muss in meinem nächsten Träumen hoffen, dass ich wieder meinen Weg zu ihr finden werde.)");
+          ƒS.Character.hideAll();
           await ƒS.Location.show(locations.BadEnding); 
           await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);
           await ƒS.update(0); 
-          ƒS.Speech.hide();
+          let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(60)])
+          await signalDelay();
         // case questionToLeyah.iSayWait:
         //  await ƒS.Speech.tell(characters.Leyah, "Und da ist es schon wieder.");
         //  await ƒS.Speech.tell(characters.Leyah, "Immer machst du dir nur sorgen um andere und achtest dabei nicht auf dich selbst.");
@@ -94,13 +97,14 @@ namespace Template {
         //  await ƒS.Speech.tell(characters.Leyah, "Es ist unverantwortlich von dir, wenn du nicht auf dich selbst schaust und deine eigenen Probleme konfrontierst.");
         //   return "LeyahBackground"
       }
-    } else {
+    } else {                             
     await ƒS.Speech.tell(dataForSave.namePlayer, "Nun gut...es fühlt sich an als würde ich mich in einem großen Raum befinden. Ich glaube ich kann mich fortbewegen, ohne irgendwo zu fallen oder mich zu stoßen.");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Meine Augen gewöhnen sich langsam an die Dunkelheit...ich fange an besser sehen zu können!");
     await ƒS.Speech.tell(dataForSave.namePlayer, "A-aber...was ist denn das? Eine Tür?");
     await ƒS.Location.show(locations.Doorway);
     await ƒS.update(transition.lines.duration, transition.lines.alpha, transition.lines.edge);
     await ƒS.update(0);
+    await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardRechts, OOBleftToRight()); 
     await ƒS.Speech.tell(dataForSave.namePlayer, "Unheimlich...");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Nanu? Ich höre hinter dieser Tür doch etwas?");
     ƒS.Sound.play(sound.crying, 1, false);
@@ -143,9 +147,11 @@ namespace Template {
         await ƒS.Speech.tell(dataForSave.namePlayer, "Wenn du sagst, dass es ein wichtiger Ort ist, werde ich mich natürlich dorthin begeben! Vielleicht finden wir schon gleich den Schlüssel zu deiner Tür.");
         await ƒS.Speech.tell(characters.Leyah, "Immer langsam " + dataForSave.namePlayer + ". Versuche nicht zu überstürzen.");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Ein bisschen Hoffnung ist nie schlecht Leyah, merke dir das!");
+        ƒS.Character.hideAll();
         dataForSave.talkedToLeyah = true;
         return "WoIstSchluessel"
       case leyahChoice.iSayWait:
+        ƒS.Character.hideAll();
         return "LeyahBackground"
       case leyahChoice.iSayNothing:
         dataForSave.sayNoToLeyah = true;

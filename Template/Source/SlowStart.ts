@@ -12,6 +12,7 @@ namespace Template {
     await ƒS.Location.show(locations.Doorway);
     await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);
     await ƒS.update(0);
+    await ƒS.Character.animate(characters.Protagonist, characters.Protagonist.pose.standardRechts, OOBleftToRight()); 
     await ƒS.Speech.tell(dataForSave.namePlayer, "A-aber...was ist denn das? Eine Tür?");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Unheimlich...");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Nanu? Ich höre hinter dieser Tür doch etwas?");
@@ -58,8 +59,10 @@ namespace Template {
         await ƒS.Speech.tell(characters.Leyah, "Hörst du " + dataForSave.namePlayer + "?");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Ich werde mein bestes geben!");
         dataForSave.talkedToLeyah = true;
+        ƒS.Character.hideAll();
         return "WoIstSchluessel"
       case leyahChoice.iSayWait:
+        ƒS.Character.hideAll();
         return "LeyahBackground"
       case leyahChoice.iSayNothing:
         await ƒS.Speech.tell(characters.Leyah, "Eine Steintafel?");
@@ -91,8 +94,10 @@ namespace Template {
             await ƒS.Speech.tell(characters.Leyah, "Hörst du " + dataForSave.namePlayer + "?");
             await ƒS.Speech.tell(dataForSave.namePlayer, "Ich werde mein bestes geben!");
             dataForSave.talkedToLeyah = true;
+            ƒS.Character.hideAll();
             return "WoIstSchluessel"
           case leyahChoice.iSayWait:
+            ƒS.Character.hideAll();
             return "LeyahBackground"
         }
     }

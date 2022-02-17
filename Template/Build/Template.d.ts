@@ -34,6 +34,16 @@ declare namespace Template {
             alpha: string;
             edge: number;
         };
+        wirbel: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
+        lines: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
     };
     let sound: {
         backgroundTheme: string;
@@ -48,6 +58,8 @@ declare namespace Template {
         rumble: string;
         laughing: string;
         breathing: string;
+        aha: string;
+        sigh: string;
     };
     let locations: {
         Schlafzimmer: {

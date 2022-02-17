@@ -11,14 +11,14 @@ namespace Template {
       await ƒS.update(0);
       await ƒS.Speech.tell(dataForSave.namePlayer, "Hey Leyah, ich bin wieder da!");
       await ƒS.Speech.tell(characters.Leyah, "Konntest du den Schlüssel finden?");
-      await ƒS.Speech.tell(dataForSave.namePlayer, "Nein den Schlüssel konnte ich leider nicht finden, allerdings ein Grabmal mit inschriften...");
+      await ƒS.Speech.tell(dataForSave.namePlayer, "Nein den Schlüssel konnte ich leider nicht finden, allerdings eine Steintafel mit Schrift versehen...");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Weißt du irgendwas darüber?");
       await ƒS.Speech.tell(characters.Leyah, "Diese Frage stellt du mir nicht das erste mal...");
       await ƒS.Speech.tell(characters.Leyah, "Weißt du eigentlich wo wir hier sind?");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Naja also...ehrlich gesagt bin ich mir nicht sicher. Das einzige woran ich mich erinnern kann ist mich ins Bett gelegt zu haben...");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Moment...");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Sag mir nicht ich befinde mich in einem T-");
-      await ƒS.Speech.tell(characters.Leyah, "Doch genau so ist es. Du befindest dich momentan in deinem eigenen Traum. Das Grabmal...beziehungsweise die Steintafel des Mals das du gesehen hast muss eine Manifestation deines Wunsches sein, den Schlüssel zu dieser Tür zu finden.");
+      await ƒS.Speech.tell(characters.Leyah, "Doch genau so ist es. Du befindest dich momentan in deinem eigenen Traum. Die Steintafel die du gesehen hast, muss eine Manifestation deines Wunsches sein, den Schlüssel zu dieser Tür zu finden.");
       await ƒS.Speech.tell(characters.Leyah, "In Träumen werden einem die tiefen und unerkundeten Ecken des eigenen Kopfes zur schau gestellt.");
       await ƒS.Speech.tell(characters.Leyah, "Dinge an die du unterbewusst denkst.");
       await ƒS.Speech.tell(characters.Leyah, "Sorgen die du hast.");
@@ -99,7 +99,7 @@ namespace Template {
     await ƒS.Speech.tell(dataForSave.namePlayer, "Meine Augen gewöhnen sich langsam an die Dunkelheit...ich fange an besser sehen zu können!");
     await ƒS.Speech.tell(dataForSave.namePlayer, "A-aber...was ist denn das? Eine Tür?");
     await ƒS.Location.show(locations.Doorway);
-    await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);
+    await ƒS.update(transition.lines.duration, transition.lines.alpha, transition.lines.edge);
     await ƒS.update(0);
     await ƒS.Speech.tell(dataForSave.namePlayer, "Unheimlich...");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Nanu? Ich höre hinter dieser Tür doch etwas?");

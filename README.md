@@ -6,7 +6,6 @@ A FUDGE module for the easy development of interactive stories, visual novels an
 - [Spielbare Visual Novel "I can't stop crying in my sleep"](https://lukasblea.github.io/VisualNovel/Template/Template.html)
 - [Quellcode](https://github.com/LukasBlea/VisualNovel/tree/main/Template/Source)
 - [Konzept-Dokument](https://lukasblea.github.io/VisualNovel/Template/Konzeption.pdf)
-- [Konzept-Dokument(falls oberes nicht funktioniert)](https://github.com/LukasBlea/VisualNovel/blob/main/Template/Konzeption.pdf)
 - [WinRar: Konzept + Projektordner](https://github.com/LukasBlea/VisualNovel/blob/main/Alles.rar)
 
 ## Bewertungskriterien

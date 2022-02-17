@@ -9,7 +9,7 @@ namespace Template {
       await ƒS.update(0);  
       ƒS.Sound.fade(sound.depression, 0, 1, true);
       ƒS.Sound.fade(sound.histheme, 0.8, 2, true);
-      let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(5)])   
+      let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(3)])   
       await signalDelay();
       await ƒS.Speech.tell(dataForSave.namePlayer, "Leyah hörst du das???");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Wir haben nicht mehr viel Zeit!");
@@ -57,12 +57,15 @@ namespace Template {
     await ƒS.update(0); 
     ƒS.Sound.fade(sound.dream, 0, 0.5, false);
     ƒS.Sound.fade(sound.histheme, 0.4, 2, true);
+    await ƒS.Speech.tell(characters.Leyah, "...........");
+    let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(3)])   
+    await signalDelay();
     await ƒS.Speech.tell(characters.Leyah, "Du möchtest mir also nicht helfen?");
     await ƒS.Speech.tell(characters.Leyah, "Ich verstehe...das ist wirklich traurig.");
     await ƒS.Speech.tell(characters.Leyah, "Verstehe mich nicht falsch.");
     await ƒS.Speech.tell(characters.Leyah, "Mir kann es egal sein, ob du mir helfen möchtest oder nicht.");
-    await ƒS.Speech.tell(characters.Leyah, "Das ich in deinem Kopf bin macht mir nichts aus. Immerhin ist nichts von dem ganzen hier die Realität.");
-    await ƒS.Speech.tell(dataForSave.namePlayer, "In meinem Kopf? Nicht die Realität?");
+    await ƒS.Speech.tell(characters.Leyah, "Das ich in deinem Kopf bin macht mir nichts aus. Immerhin ist nichts von dem was du siehst real.");
+    await ƒS.Speech.tell(dataForSave.namePlayer, "In meinem Kopf? Nicht real?");
     await ƒS.Speech.tell(characters.Leyah, "Aber du kannst so nicht weiterleben. Du musst loslassen.");
     await ƒS.Speech.tell(characters.Leyah, "Solange du mich in deinen Träumen wiederfinden kannst, wirst du nicht in der Lage sein wahres Glück im Leben zu finden.");
     await ƒS.Speech.tell(characters.Leyah, "Denn es bedeutet, dass du immer noch über das nachdenkst, was damals passiert ist.");

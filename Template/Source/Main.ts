@@ -25,6 +25,16 @@ namespace Template {
       duration: 1,
       alpha: "./Images/Transitions/wet.jpg",
       edge: 2,
+    },
+    wirbel: {
+      duration: 1,
+      alpha: "./Images/Transitions/wirbel.jpg",
+      edge: 2,
+    },
+    lines: {
+      duration: 1,
+      alpha: "./Images/Transitions/lines.jpg",
+      edge: 2,
     }
   };
 
@@ -39,11 +49,13 @@ namespace Template {
 
     // Sound
     clickGeräusch: "./Sounds/Click.mp3",
-    sleep: "./Sounds/Sleeping.wav",
+    sleep: "./Sounds/Sleeping.mp3",               //Voiceline by me (but not proud)
     crying: "./Sounds/Crying.wav",
     rumble: "./Sounds/Rumble.wav",
     laughing: "./Sounds/Laughing.mp3",
-    breathing: "./Sounds/Heavy_breathing.wav"   //Voiceline by me
+    breathing: "./Sounds/Heavy_breathing.wav",   //Voiceline by me
+    aha: "./Sounds/aha.mp3",
+    sigh: "./Sounds/sigh.mp3",                    //Voiceline by me
   };
 
   // Backgrounds

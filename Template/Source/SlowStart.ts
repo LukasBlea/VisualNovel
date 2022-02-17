@@ -2,7 +2,7 @@ namespace Template {
   export async function SlowStart(): ƒS.SceneReturn {
     let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(3)])
     await ƒS.Location.show(locations.DreamStart);
-    await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);
+    await ƒS.update(transition.lines.duration, transition.lines.alpha, transition.lines.edge);
     await ƒS.update(0);
     ƒS.Sound.fade(sound.depression, 0, 1, true);
     ƒS.Sound.fade(sound.dream, 0.4, 2, true);
@@ -41,7 +41,7 @@ namespace Template {
     let leyahChoice = {
       iSayGo: "Ich werde mein bestes geben, das verspreche ich dir!",
       iSayWait: "Könntest du mir vorher noch etwas mehr über dich erzählen?",
-      iSayNothing: "Weißt du, was es mit diesem Grabmal auf sich hat den ich vorher finden konnte?"
+      iSayNothing: "Weißt du, was es mit dieser Steinfafel auf sich hat die ich vorher finden konnte?"
     };
     let secondDialougeElement = await ƒS.Menu.getInput(leyahChoice, "FirstDecisions");
     switch (secondDialougeElement) {
@@ -49,7 +49,7 @@ namespace Template {
         await ƒS.Speech.tell(characters.Leyah, "Dankeschön, das freut mich wirklich!");
         await ƒS.Speech.tell(characters.Leyah, "Hör zu, du musst dich umdrehen und zurück ins dunkle laufen.");
         await ƒS.Speech.tell(characters.Leyah, "Laufe bis du ein blaues Licht siehst.");
-        await ƒS.Speech.tell(dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich dieses eigenartige Grabmal auffinden...");
+        await ƒS.Speech.tell(dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diese eigenartige Steintafel auffinden...");
         await ƒS.Speech.tell(characters.Leyah, "Es scheint ein Ort zu sein welcher dir helfen kann den Schlüssel zu finden.");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Aber...ich komme doch gerade von dort.");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Nun gut.");
@@ -62,7 +62,7 @@ namespace Template {
       case leyahChoice.iSayWait:
         return "LeyahBackground"
       case leyahChoice.iSayNothing:
-        await ƒS.Speech.tell(characters.Leyah, "Ein Grabmal?");
+        await ƒS.Speech.tell(characters.Leyah, "Eine Steintafel?");
         await ƒS.Speech.tell(characters.Leyah, "Nur du musst es sehen können, denn ich habe dich schon einmal darüber reden hören.");
         await ƒS.Speech.tell(characters.Leyah, "Man spricht bei diesem Mal von einer Verkörperung des inneren Wunsch des T-...");
         await ƒS.Speech.tell(characters.Leyah, "T-...T-...Trainers.");
@@ -82,7 +82,7 @@ namespace Template {
             await ƒS.Speech.tell(characters.Leyah, "Dankeschön, das freut mich wirklich!");
             await ƒS.Speech.tell(characters.Leyah, "Hör zu, du musst dich umdrehen und zurück ins dunkle laufen.");
             await ƒS.Speech.tell(characters.Leyah, "Laufe bis du ein blaues Licht siehst.");
-            await ƒS.Speech.tell(dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diesen seltsame Grabmal auffinden...");
+            await ƒS.Speech.tell(dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diese seltsame Steintafel auffinden...");
             await ƒS.Speech.tell(characters.Leyah, "Es scheint ein Ort zu sein welcher dir helfen kann den Schlüssel zu finden.");
             await ƒS.Speech.tell(dataForSave.namePlayer, "Aber...ich komme doch gerade von dort.");
             await ƒS.Speech.tell(dataForSave.namePlayer, "Nun gut.");

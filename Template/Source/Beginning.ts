@@ -21,9 +21,10 @@ namespace Template {
         T0014: "Ich kann ein leichtes Licht am Horizont erkennen.", 
       },
     }
+    let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(3)])  
     ƒS.Sound.fade(sound.backgroundTheme, 0.2, 2, true);
     await ƒS.Location.show(locations.Schlafzimmer);
-    await ƒS.update(transition.wet.duration, transition.wet.alpha, transition.wet.edge);
+    await ƒS.update(transition.wirbel.duration, transition.wirbel.alpha, transition.wirbel.edge);
     // await ƒS.Character.show(characters.Protagonist, characters.Protagonist.pose.happy, ƒS.positionPercent(70, 100));                           // Happy Haru mit Koordinaten auf Screen
     await ƒS.update(0);                                                                                                                        // Sekunden
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0000);
@@ -36,13 +37,14 @@ namespace Template {
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0003);
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0004);
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0005);
+    ƒS.Sound.play(sound.sigh, 0.8, false);
+    await signalDelay();
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0006);
     await ƒS.Speech.tell(characters.narrator, text.narrator.T0007);  
-    ƒS.Sound.play(sound.sleep, 1, false);
-    let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(3)])   
-    await signalDelay();
+    ƒS.Sound.play(sound.sleep, 1, false); 
     await ƒS.Location.show(locations.DreamStart); 
-    await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);
+    await signalDelay();
+    await ƒS.update(transition.wirbel.duration, transition.wirbel.alpha, transition.wirbel.edge);
     await ƒS.update(0);    
     ƒS.Sound.fade(sound.backgroundTheme, 0, 1, false);
     ƒS.Sound.fade(sound.dream, 0.2, 2, true);

@@ -74,7 +74,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
           //await ƒS.Speech.tell(dataForSave.namePlayer, "Mir unterstellt, dass ich ein schlechter Mensch bin, da ich sie alleine lassen musste.");
           //await ƒS.Speech.tell(dataForSave.namePlayer, "Dabei war ich selbst nur verloren und auf der Suche nach dem richtigen Weg...");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ich muss sie schnell rauslassen. Sie kann und sollte nicht noch länger in meinem Kopf bleiben.");
-          ƒS.Sound.fade(sound.rumble, 0.7, 2, true);
+          ƒS.Sound.fade(sound.rumble, 1, 2, true);
           await signalDelay();
           await ƒS.Speech.tell(dataForSave.namePlayer, "I-...IRGENDETWAS PASSIERT HIER!");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ich kann etwas hören...es wird langsam lauter und lauter");

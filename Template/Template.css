@@ -66,10 +66,6 @@ speech content {
   cursor: pointer;
 }
 
-speech.Player {
-  color: lightgreen;
-}
-
 speech.Leyah name {
   color: lightcoral;
 }

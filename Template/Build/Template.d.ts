@@ -41,6 +41,7 @@ declare namespace Template {
         keyroom: string;
         depression: string;
         ending: string;
+        histheme: string;
         clickGeräusch: string;
         sleep: string;
         crying: string;

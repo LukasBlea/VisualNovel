@@ -92,6 +92,10 @@ var Template;
           <td>www.elements.envato.com/de</td>\
         </tr>\
         <tr>\
+          <td>Endcredits</td>\
+          <td>Undertale - His Theme</td>\
+        </tr>\
+        <tr>\
           <td>Soundeffekte</td>\
           <td>www.elements.envato.com/de</td>\
         </tr>\
@@ -111,7 +115,9 @@ var Template;
             await Template.ƒS.update(Template.transition.blurr.duration, Template.transition.blurr.alpha, Template.transition.blurr.edge);
             await Template.ƒS.update(0);
             Template.ƒS.Sound.fade(Template.sound.depression, 0, 1, true);
-            Template.ƒS.Sound.fade(Template.sound.ending, 0.8, 2, true);
+            Template.ƒS.Sound.fade(Template.sound.histheme, 0.8, 2, true);
+            let signalDelay = Template.ƒS.Progress.defineSignal([() => Template.ƒS.Progress.delay(5)]);
+            await signalDelay();
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Leyah hörst du das???");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Wir haben nicht mehr viel Zeit!");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Warum hast du's mir nicht gesagt Leyah?");
@@ -139,7 +145,7 @@ var Template;
             switch (fifthDialougeElement) {
                 case finalQuestion.iSayGo:
                     await Template.ƒS.Speech.tell(Template.characters.Leyah, "Ich danke dir " + Template.dataForSave.namePlayer + "!...schreite endlich voran in deinem Leben, ok? Ich werde schon zurechtkommen. Wir müssen jetzt ohne einander weitermachen.");
-                    await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Nein ich dake dir Leyah...danke für alles.");
+                    await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Nein ich danke dir Leyah...danke für alles.");
                     await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Gib auf dich Acht...<3");
                     await Template.ƒS.Location.show(Template.locations.OpenDoor);
                     await Template.ƒS.update(Template.transition.blurr.duration, Template.transition.blurr.alpha, Template.transition.blurr.edge);
@@ -155,33 +161,31 @@ var Template;
             await Template.ƒS.update(Template.transition.blurr.duration, Template.transition.blurr.alpha, Template.transition.blurr.edge);
             await Template.ƒS.update(0);
             Template.ƒS.Sound.fade(Template.sound.dream, 0, 0.5, false);
-            Template.ƒS.Sound.fade(Template.sound.ending, 0.4, 2, true);
+            Template.ƒS.Sound.fade(Template.sound.histheme, 0.4, 2, true);
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Du möchtest mir also nicht helfen?");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Ich verstehe...das ist wirklich traurig.");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Verstehe mich nicht falsch.");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Mir kann es egal sein, ob du mir helfen möchtest oder nicht.");
-            await Template.ƒS.Speech.tell(Template.characters.Leyah, "Das ich in deinem Kopf bin macht mir nichts aus. Immerhin ist nichts von dem ganzen hier real.");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "In meinem Kopf? Nichts real?");
+            await Template.ƒS.Speech.tell(Template.characters.Leyah, "Das ich in deinem Kopf bin macht mir nichts aus. Immerhin ist nichts von dem ganzen hier die Realität.");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "In meinem Kopf? Nicht die Realität?");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Aber du kannst so nicht weiterleben. Du musst loslassen.");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Solange du mich in deinen Träumen wiederfinden kannst, wirst du nicht in der Lage sein wahres Glück im Leben zu finden.");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Denn es bedeutet, dass du immer noch über das nachdenkst, was damals passiert ist.");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "...");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Machs gut " + Template.dataForSave.namePlayer + ". Wir werden uns wiedersehen.");
-            Template.ƒS.Sound.fade(Template.sound.ending, 0, 5, true);
             await Template.ƒS.Location.show(Template.locations.Doorway);
             await Template.ƒS.update(Template.transition.blurr.duration, Template.transition.blurr.alpha, Template.transition.blurr.edge);
             await Template.ƒS.update(2);
             await Template.ƒS.Location.show(Template.locations.Bed);
             await Template.ƒS.update(Template.transition.blurr.duration, Template.transition.blurr.alpha, Template.transition.blurr.edge);
             await Template.ƒS.update(0);
-            Template.ƒS.Sound.fade(Template.sound.ending, 0, 2, true);
-            Template.ƒS.Sound.fade(Template.sound.backgroundTheme, 0.35, 2, true);
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Nanu? Ich bin schon wieder wach?");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "A-...aber warum bin ich denn so schrecklich traurig?");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Es fühlt sich an als hätte ich eine unglaubliche Last in mir...");
+            Template.ƒS.Sound.fade(Template.sound.histheme, 0, 5, true);
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Nanu? ...Ich bin schon wieder wach?");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ich habe schon wieder Tränen in den Augen?");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Es fühlt sich an als hätte ich eine unglaubliche Last auf mir liegen...");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ich könnte einfach losheulen, jedesmal wenn ich aufwache.");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ob das wohl normal ist? Erzählen möchte ich auch niemandem davon...ist ja peinlich.");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ich frage mich, wann dieses tiefe Gefühl der leere endlich weichen wird.");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ob das wohl normal ist?");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ich frage mich, wann dieses Gefühl der leere endlich weichen wird.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Was könnte dieses Gefühl verursachen? Irgendwann muss ich auf eine Lösung kommen...");
             await Template.ƒS.Location.show(Template.locations.BadEnding);
             await Template.ƒS.update(Template.transition.blurr.duration, Template.transition.blurr.alpha, Template.transition.blurr.edge);
@@ -290,13 +294,14 @@ var Template;
         keyroom: "./Sounds/Keyroom.mp3",
         depression: "./Sounds/Depression.mp3",
         ending: "./Sounds/Ending.mp3",
+        histheme: "./Sounds/HisTheme.mp3",
         // Sound
         clickGeräusch: "./Sounds/Click.mp3",
         sleep: "./Sounds/Sleeping.wav",
         crying: "./Sounds/Crying.wav",
         rumble: "./Sounds/Rumble.wav",
         laughing: "./Sounds/Laughing.mp3",
-        breathing: "./Sounds/Heavy_breathing.wav"
+        breathing: "./Sounds/Heavy_breathing.wav" //Voiceline by me
     };
     // Backgrounds
     Template.locations = {
@@ -463,7 +468,7 @@ var Template;
         let leyahChoice = {
             iSayGo: "Ich werde mein bestes geben, das verspreche ich dir!",
             iSayWait: "Könntest du mir vorher noch etwas mehr über dich erzählen?",
-            iSayNothing: "Weißt du, was es mit diesem Stein auf sich hat den ich vorher finden konnte?"
+            iSayNothing: "Weißt du, was es mit diesem Grabmal auf sich hat den ich vorher finden konnte?"
         };
         let secondDialougeElement = await Template.ƒS.Menu.getInput(leyahChoice, "FirstDecisions");
         switch (secondDialougeElement) {
@@ -471,7 +476,7 @@ var Template;
                 await Template.ƒS.Speech.tell(Template.characters.Leyah, "Dankeschön, das freut mich wirklich!");
                 await Template.ƒS.Speech.tell(Template.characters.Leyah, "Hör zu, du musst dich umdrehen und zurück ins dunkle laufen.");
                 await Template.ƒS.Speech.tell(Template.characters.Leyah, "Laufe bis du ein blaues Licht siehst.");
-                await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diesen seltsamen Stein auffinden...");
+                await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich dieses eigenartige Grabmal auffinden...");
                 await Template.ƒS.Speech.tell(Template.characters.Leyah, "Es scheint ein Ort zu sein welcher dir helfen kann den Schlüssel zu finden.");
                 await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Aber...ich komme doch gerade von dort.");
                 await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Nun gut.");
@@ -484,15 +489,15 @@ var Template;
             case leyahChoice.iSayWait:
                 return "LeyahBackground";
             case leyahChoice.iSayNothing:
-                await Template.ƒS.Speech.tell(Template.characters.Leyah, "Einen Stein?");
-                await Template.ƒS.Speech.tell(Template.characters.Leyah, "Nur du musst ihn sehen können, denn ich habe dich schon einmal darüber reden hören.");
-                await Template.ƒS.Speech.tell(Template.characters.Leyah, "Man spricht von einer Verkörperung des inneren Wunsch des T-...");
+                await Template.ƒS.Speech.tell(Template.characters.Leyah, "Ein Grabmal?");
+                await Template.ƒS.Speech.tell(Template.characters.Leyah, "Nur du musst es sehen können, denn ich habe dich schon einmal darüber reden hören.");
+                await Template.ƒS.Speech.tell(Template.characters.Leyah, "Man spricht bei diesem Mal von einer Verkörperung des inneren Wunsch des T-...");
                 await Template.ƒS.Speech.tell(Template.characters.Leyah, "T-...T-...Trainers.");
                 await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Die Verkörperung des inneren Wunsches des Trainers?");
                 await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Dir ist bewusst, dass ich nichts von dem verstanden habe was du mir versucht hast zu vermitteln, oder?");
                 await Template.ƒS.Speech.tell(Template.characters.Leyah, "Tut mir Leid, ich stoße an meine Grenzen. Mehr kann ich dazu nicht sagen.");
                 await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ein komisches Mädchen bist du...naja!");
-                // Selbe Frage, jedoch ohn Option "Weißt du, was es mit diesem Stein auf sich hat den ich vorher finden konnte?" --> evtl. sehr unpraktisch gelößt but it
+                // Selbe Frage, jedoch ohne Option "Weißt du, was es mit diesem Stein auf sich hat den ich vorher finden konnte?" --> evtl. sehr unpraktisch gelößt but it
                 await Template.ƒS.Speech.tell(Template.characters.Leyah, "Jetzt nochmal: Möchtest du mir helfen und versuchen mich zu befreien?");
                 let leyahChoice2 = {
                     iSayGo: "Ich werde mein bestes geben, das verspreche ich dir!",
@@ -504,7 +509,7 @@ var Template;
                         await Template.ƒS.Speech.tell(Template.characters.Leyah, "Dankeschön, das freut mich wirklich!");
                         await Template.ƒS.Speech.tell(Template.characters.Leyah, "Hör zu, du musst dich umdrehen und zurück ins dunkle laufen.");
                         await Template.ƒS.Speech.tell(Template.characters.Leyah, "Laufe bis du ein blaues Licht siehst.");
-                        await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diesen seltsamen Stein auffinden...");
+                        await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diesen seltsame Grabmal auffinden...");
                         await Template.ƒS.Speech.tell(Template.characters.Leyah, "Es scheint ein Ort zu sein welcher dir helfen kann den Schlüssel zu finden.");
                         await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Aber...ich komme doch gerade von dort.");
                         await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Nun gut.");
@@ -533,14 +538,14 @@ var Template;
             await Template.ƒS.update(0);
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Hey Leyah, ich bin wieder da!");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Konntest du den Schlüssel finden?");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Nein den Schlüssel konnte ich leider nicht finden, allerdings einen seltsamen Stein mit inschriften...");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Nein den Schlüssel konnte ich leider nicht finden, allerdings ein Grabmal mit inschriften...");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Weißt du irgendwas darüber?");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Diese Frage stellt du mir nicht das erste mal...");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Weißt du eigentlich wo wir hier sind?");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Naja also...ehrlich gesagt bin ich mir nicht sicher. Das einzige woran ich mich erinnern kann ist mich ins Bett gelegt zu haben...");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Moment...");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Sag mir nicht ich befinde mich in einem T-");
-            await Template.ƒS.Speech.tell(Template.characters.Leyah, "Doch genau so ist es. Du befindest dich momentan in deinem eigenen Traum. Der Stein den du gesehen hast muss eine Manifestation deines Wunsches sein, den Schlüssel zu dieser Tür zu finden.");
+            await Template.ƒS.Speech.tell(Template.characters.Leyah, "Doch genau so ist es. Du befindest dich momentan in deinem eigenen Traum. Das Grabmal...beziehungsweise die Steintafel des Mals das du gesehen hast muss eine Manifestation deines Wunsches sein, den Schlüssel zu dieser Tür zu finden.");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "In Träumen werden einem die tiefen und unerkundeten Ecken des eigenen Kopfes zur schau gestellt.");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Dinge an die du unterbewusst denkst.");
             await Template.ƒS.Speech.tell(Template.characters.Leyah, "Sorgen die du hast.");
@@ -671,6 +676,7 @@ var Template;
                 case leyahChoice.iSayWait:
                     return "LeyahBackground";
                 case leyahChoice.iSayNothing:
+                    Template.dataForSave.sayNoToLeyah = true;
                     return "Finale";
             }
         }
@@ -690,7 +696,7 @@ var Template;
             await Template.ƒS.update(0);
             await signalDelay();
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Es scheint so als hätte Leyah recht...ich sehe hier ein blaues Licht.");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Allerdings ist dieser Stein echt gruselig...sieht irgendwie verrückt aus.");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Allerdings ist dieser Grabmal echt gruselig...sieht irgendwie verrückt aus.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Und es scheint wirklich nicht das erste mal zu sein, dass ich nach einem Schlüssel für ihre Tür gesucht habe.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Allerdings sieht es so aus, als würde sich der Schlüssel nicht hier befinden.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Wenn ich hier schon öfter war und gesucht habe...was soll diesmal anders sein?");
@@ -699,7 +705,7 @@ var Template;
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Komm schon " + Template.dataForSave.namePlayer + " du kannst nicht jetzt schon aufgeben. Sie verlässt sich auf dich.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ihr Geruch, ihre Stimme...alles an ihr kommt mir so vertraut vor.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ich möchte sie nicht enttäuschen.");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Womöglich wäre es schlau sie zu fragen, was es mit diesem Stein hier auf sich hat.");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Womöglich wäre es schlau sie zu fragen, was es mit diesem Grabmal hier auf sich hat.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Sie sollte sich hier am besten auskennen. Immerhin hat sie schon viel Zeit hier verbringen müssen wie es scheint.");
             let askLeyah = {
                 iSayGo: "Ich mache mich auf den Weg zurück zu ihrer Tür. Sie wird mir helfen können.",
@@ -752,7 +758,7 @@ var Template;
                     //await ƒS.Speech.tell(dataForSave.namePlayer, "Mir unterstellt, dass ich ein schlechter Mensch bin, da ich sie alleine lassen musste.");
                     //await ƒS.Speech.tell(dataForSave.namePlayer, "Dabei war ich selbst nur verloren und auf der Suche nach dem richtigen Weg...");
                     await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ich muss sie schnell rauslassen. Sie kann und sollte nicht noch länger in meinem Kopf bleiben.");
-                    Template.ƒS.Sound.fade(Template.sound.rumble, 0.7, 2, true);
+                    Template.ƒS.Sound.fade(Template.sound.rumble, 1, 2, true);
                     await signalDelay();
                     await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "I-...IRGENDETWAS PASSIERT HIER!");
                     await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ich kann etwas hören...es wird langsam lauter und lauter");
@@ -783,7 +789,7 @@ var Template;
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Dies ist wirklich ein seltsamer Ort.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Scheint als hätte jemand seine Schlüssel verloren.");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Hahahaha.");
-            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Aber wieso einen Stein nehmen und dort denselben Satz immer und immer wieder draufschreiben?");
+            await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Aber wieso ein Grabmal nehmen auf dessen Tafel denselben Satz immer und immer wieder draufschreiben?");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "......");
             await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "HALLO? IST HIER JEMAND?");
             let signalDelay = Template.ƒS.Progress.defineSignal([() => Template.ƒS.Progress.delay(2)]);

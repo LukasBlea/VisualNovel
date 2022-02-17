@@ -17,6 +17,10 @@ namespace Template {
           <td>www.elements.envato.com/de</td>\
         </tr>\
         <tr>\
+          <td>Endcredits</td>\
+          <td>Undertale - His Theme</td>\
+        </tr>\
+        <tr>\
           <td>Soundeffekte</td>\
           <td>www.elements.envato.com/de</td>\
         </tr>\

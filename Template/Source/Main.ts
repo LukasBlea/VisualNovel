@@ -35,6 +35,7 @@ namespace Template {
     keyroom: "./Sounds/Keyroom.mp3",
     depression: "./Sounds/Depression.mp3",
     ending: "./Sounds/Ending.mp3",
+    histheme: "./Sounds/HisTheme.mp3",
 
     // Sound
     clickGeräusch: "./Sounds/Click.mp3",
@@ -42,7 +43,7 @@ namespace Template {
     crying: "./Sounds/Crying.wav",
     rumble: "./Sounds/Rumble.wav",
     laughing: "./Sounds/Laughing.mp3",
-    breathing: "./Sounds/Heavy_breathing.wav"
+    breathing: "./Sounds/Heavy_breathing.wav"   //Voiceline by me
   };
 
   // Backgrounds

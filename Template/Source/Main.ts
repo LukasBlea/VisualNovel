@@ -56,6 +56,7 @@ namespace Template {
     breathing: "./Sounds/Heavy_breathing.wav",   //Voiceline by me
     aha: "./Sounds/aha.mp3",
     sigh: "./Sounds/sigh.mp3",                    //Voiceline by me
+    door: "./Sound/Door.wav",
   };
 
   // Backgrounds
@@ -129,6 +130,8 @@ namespace Template {
       }
     }
   }
+
+  // ANIMATIONEN
 
   export function leftToRight(): ƒS.AnimationDefinition {
     return {

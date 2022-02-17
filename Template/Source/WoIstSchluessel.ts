@@ -49,7 +49,6 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
           await ƒS.Speech.tell(dataForSave.namePlayer, "Hmmmmmmmmm.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Das ist vielleicht weit hergeholt, aber...");
           await ƒS.Speech.tell(dataForSave.namePlayer, "...habe ich jemals versucht einfach ihre Tür zu öffnen?");
-          await ƒS.Speech.tell(dataForSave.namePlayer, "Vielleicht bin ich ja der Schlüssel zu ihrer Tür und es gibt keinen physischen Schlüssel?");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ich könnte sie also vielleicht...einfach gehen lassen?");
           ƒS.Sound.fade(sound.breathing, 0.7, 1, true);
           await ƒS.Speech.tell(dataForSave.namePlayer, "W-....Warum?");
@@ -60,7 +59,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ich erinnere mich...");
           ƒS.Sound.fade(sound.breathing, 0, 1, false);
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ja.");
-          await ƒS.Speech.tell(dataForSave.namePlayer, "Leyah war der Mensch, der mir alles in meinem Leben bedeutet hat.");
+          await ƒS.Speech.tell(dataForSave.namePlayer, "Sie war der Mensch, der mir alles in meinem Leben bedeutet hat.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Wenn sie hier ist, kann das nur bedeuten, das etwas nicht stimmt.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Wir haben uns schon seit Jahren nicht mehr gesehen.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ich muss schnell zu ihr und ihre Tür öffnen.");
@@ -78,7 +77,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
           ƒS.Sound.fade(sound.rumble, 1, 2, true);
           await signalDelay();
           await ƒS.Speech.tell(dataForSave.namePlayer, "I-...IRGENDETWAS PASSIERT HIER!");
-          await ƒS.Speech.tell(dataForSave.namePlayer, "Ich kann etwas hören...es wird langsam lauter und lauter");
+          await ƒS.Speech.tell(dataForSave.namePlayer, "Ich kann etwas hören...es wird langsam lauter und lauter.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Ein ungutes Gefühl macht sich in mir breit...ich weiß, dass ich nicht viel länger hier bleiben kann.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "ICH KOMME LEYAH! DU BIST GLEICH FREI!");
           ƒS.Character.hideAll();
@@ -92,7 +91,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       await ƒS.update(transition.lines.duration, transition.lines.alpha, transition.lines.edge);
       await ƒS.update(0);
       await ƒS.Speech.tell(dataForSave.namePlayer, "Diese Dunkelheit erinnert mich an...an irgendetwas. Wie als wäre ich hier schon einmal gewesen. Jedoch war ich das letzte mal nicht alleine. Es war jemand mit mir hier.");
-      await ƒS.Speech.tell(dataForSave.namePlayer, "Aber nanu? Warum werde ich auf einmal so furchtbar traurig? Ich kann es nicht sehen, aber wissen tue ich es ganz genau: Mir fließen Tränen von den Augen.");
+      await ƒS.Speech.tell(dataForSave.namePlayer, "Aber nanu? Warum werde ich auf einmal so furchtbar traurig?");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Ja...ich bin mir ganz sicher. Immer wenn ich hier bin gibt es Trauer in mir. Es fühlt sich an als wäre ich kurz davor jemand wichtiges zu verlieren.");
       ƒS.Sound.fade(sound.dream, 0, 2, false);
       await ƒS.Speech.tell(dataForSave.namePlayer, "Oh meine Augen gewöhnen sich an die Dunkelheit...ich kann anfangen mehr zu erkennen!");
@@ -110,7 +109,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       await ƒS.Speech.tell(dataForSave.namePlayer, "Scheint als hätte jemand seine Schlüssel verloren.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Hahahaha.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Aber wieso eine Steintafel nehmen, auf dessen Steinafel man denselben Satz immer und immer wieder zeigt?");
-      await ƒS.Speech.tell(dataForSave.namePlayer, "...Hier muss doch irgendjemand sein...");
+      await ƒS.Speech.tell(dataForSave.namePlayer, "...hier muss doch irgendjemand sein...");
       await ƒS.Speech.tell(dataForSave.namePlayer, "HALLO? IST HIER JEMAND?");
       let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(2)])
       await signalDelay();

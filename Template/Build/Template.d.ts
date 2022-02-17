@@ -60,6 +60,7 @@ declare namespace Template {
         breathing: string;
         aha: string;
         sigh: string;
+        door: string;
     };
     let locations: {
         Schlafzimmer: {

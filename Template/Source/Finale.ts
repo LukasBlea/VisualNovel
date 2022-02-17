@@ -20,7 +20,7 @@ namespace Template {
       await ƒS.Speech.tell(characters.Leyah, "Es tut mir leid " + dataForSave.namePlayer + ". Du musstest von selbst drauf kommen.");
       await ƒS.Speech.tell(characters.Leyah, "Der Schlüssel war verloren...");
       await ƒS.Speech.tell(characters.Leyah, "...denn du wusstest nicht mehr was richtig oder falsch war.");
-      await ƒS.Speech.tell(characters.Leyah, "Hätte ich dir verraten, dass du dich in einem Traum befindest, wärst du zu schnell aufgewacht.");
+      await ƒS.Speech.tell(characters.Leyah, "Hätte ich dir verraten, dass du dich in einem Traum befindest, wärst du zu schnell aufgewacht. Wie auch so oft schon...");
       await ƒS.Speech.tell(characters.Leyah, "Du musstest aus dir selbst heraus die Tür öffnen versteht du?");
       await ƒS.Speech.tell(characters.Leyah, "Auf einmal hast du so stark an mir festgehalten, obwohl du es doch damals selbst beendet hattest " + dataForSave.namePlayer + ".");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Es tut mir leid!! Du hättest niemals in alles reingezogen werden sollen! Es tut mir so leid...");
@@ -30,10 +30,10 @@ namespace Template {
       await ƒS.Speech.tell(dataForSave.namePlayer, "Ich verstehe-");
       await ƒS.Speech.tell(dataForSave.namePlayer, "...");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Leyah...ich lasse dich jetzt los ok? Ich versuche ohne dich Glücklich zu werden.");
-      await ƒS.Speech.tell(dataForSave.namePlayer, "Ich öffne die Tür und lasse dich somit gehen...ok?");
+      await ƒS.Speech.tell(dataForSave.namePlayer, "Ich öffne die Tür und lasse dich somit gehen...");
       await ƒS.Speech.tell(characters.Leyah, "Versprich mir, dass du aufhören wirst an mich zu denken. Du musst es mir versprechen, hörst du " + dataForSave.namePlayer + "?");
       let finalQuestion = {
-        iSayGo: "Ich verspreche es dir",
+        iSayGo: "Ich verspreche es dir.",
       };
       let fifthDialougeElement = await ƒS.Menu.getInput(finalQuestion, "FirstDecisions");
       switch (fifthDialougeElement) {
@@ -41,6 +41,7 @@ namespace Template {
           await ƒS.Speech.tell(characters.Leyah, "Ich danke dir " + dataForSave.namePlayer + "!...schreite endlich voran in deinem Leben, ok? Ich werde schon zurechtkommen. Wir müssen jetzt ohne einander weitermachen.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Nein ich danke dir Leyah...danke für alles.");
           await ƒS.Speech.tell(dataForSave.namePlayer, "Gib auf dich Acht...<3");
+          ƒS.Sound.play(sound.door, 0.4);
           await ƒS.Location.show(locations.OpenDoor); 
           await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);
           await ƒS.update(0); 
@@ -69,8 +70,8 @@ namespace Template {
     await ƒS.Speech.tell(characters.Leyah, "Das ich in deinem Kopf bin macht mir nichts aus. Immerhin ist nichts von dem was du siehst real.");
     await ƒS.Speech.tell(dataForSave.namePlayer, "In meinem Kopf? Nicht real?");
     await ƒS.Speech.tell(characters.Leyah, "Aber du kannst so nicht weiterleben. Du musst loslassen.");
-    await ƒS.Speech.tell(characters.Leyah, "Solange du mich in deinen Träumen wiederfinden kannst, wirst du nicht in der Lage sein wahres Glück im Leben zu finden.");
-    await ƒS.Speech.tell(characters.Leyah, "Denn es bedeutet, dass du immer noch über das nachdenkst, was damals passiert ist.");
+    await ƒS.Speech.tell(characters.Leyah, "Solange du mich in deinen Träumen wiederfinden kannst, wirst du nicht in der Lage sein weiter zu wachsen und Glück im Leben zu finden.");
+    await ƒS.Speech.tell(characters.Leyah, "Denn es bedeutet, dass du immer noch an vergangenem festhängst.");
     await ƒS.Speech.tell(characters.Leyah, "...");
     await ƒS.Speech.tell(characters.Leyah, "Machs gut " + dataForSave.namePlayer + ". Wir werden uns wiedersehen.");
     await ƒS.Location.show(locations.Doorway); 
@@ -80,13 +81,12 @@ namespace Template {
     await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);
     await ƒS.update(0); 
     ƒS.Sound.fade(sound.histheme, 0, 5, true);
-    await ƒS.Speech.tell(dataForSave.namePlayer, "Nanu? ...Ich bin schon wieder wach?");
-    await ƒS.Speech.tell(dataForSave.namePlayer, "Ich habe schon wieder Tränen in den Augen?");
+    await ƒS.Speech.tell(dataForSave.namePlayer, "Nanu? ...Ich bin ja wach?");
+    await ƒS.Speech.tell(dataForSave.namePlayer, "...und habe schon wieder Tränen in den Augen.");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Es fühlt sich an als hätte ich eine unglaubliche Last auf mir liegen...");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Ich könnte einfach losheulen, jedesmal wenn ich aufwache.");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Ob das wohl normal ist?");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Ich frage mich, wann dieses Gefühl der leere endlich weichen wird.");
-    await ƒS.Speech.tell(dataForSave.namePlayer, "Was könnte dieses Gefühl verursachen? Irgendwann muss ich auf eine Lösung kommen...");
     ƒS.Character.hideAll();
     await ƒS.Location.show(locations.BadEnding); 
     await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);

@@ -146,7 +146,6 @@ namespace Template {
         await ƒS.Speech.tell(dataForSave.namePlayer, "Nun gut.");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Wenn du sagst, dass es ein wichtiger Ort ist, werde ich mich natürlich dorthin begeben! Vielleicht finden wir schon gleich den Schlüssel zu deiner Tür.");
         await ƒS.Speech.tell(characters.Leyah, "Immer langsam " + dataForSave.namePlayer + ". Versuche nicht zu überstürzen.");
-        await ƒS.Speech.tell(dataForSave.namePlayer, "Ein bisschen Hoffnung ist nie schlecht Leyah, merke dir das!");
         ƒS.Character.hideAll();
         dataForSave.talkedToLeyah = true;
         return "WoIstSchluessel"

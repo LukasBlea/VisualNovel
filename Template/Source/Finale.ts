@@ -59,8 +59,8 @@ namespace Template {
     await ƒS.Speech.tell(characters.Leyah, "Ich verstehe...das ist wirklich traurig.");
     await ƒS.Speech.tell(characters.Leyah, "Verstehe mich nicht falsch.");
     await ƒS.Speech.tell(characters.Leyah, "Mir kann es egal sein, ob du mir helfen möchtest oder nicht.");
-    await ƒS.Speech.tell(characters.Leyah, "Das ich in deinem Kopf bin macht mir nichts aus. Immerhin ist nichts von dem ganzen hier real.");
-    await ƒS.Speech.tell(dataForSave.namePlayer, "In meinem Kopf? Nichts real?");
+    await ƒS.Speech.tell(characters.Leyah, "Das ich in deinem Kopf bin macht mir nichts aus. Immerhin ist nichts von dem ganzen hier die Realität.");
+    await ƒS.Speech.tell(dataForSave.namePlayer, "In meinem Kopf? Nicht die Realität?");
     await ƒS.Speech.tell(characters.Leyah, "Aber du kannst so nicht weiterleben. Du musst loslassen.");
     await ƒS.Speech.tell(characters.Leyah, "Solange du mich in deinen Träumen wiederfinden kannst, wirst du nicht in der Lage sein wahres Glück im Leben zu finden.");
     await ƒS.Speech.tell(characters.Leyah, "Denn es bedeutet, dass du immer noch über das nachdenkst, was damals passiert ist.");
@@ -75,12 +75,12 @@ namespace Template {
     await ƒS.update(0); 
     ƒS.Sound.fade(sound.ending, 0, 2, true);
     ƒS.Sound.fade(sound.backgroundTheme, 0.35, 2, true);
-    await ƒS.Speech.tell(dataForSave.namePlayer, "Nanu? Ich bin schon wieder wach?");
-    await ƒS.Speech.tell(dataForSave.namePlayer, "A-...aber warum bin ich denn so schrecklich traurig?");
+    await ƒS.Speech.tell(dataForSave.namePlayer, "Nanu? ...Ich bin schon wieder wach?");
+    await ƒS.Speech.tell(dataForSave.namePlayer, "Ich habe schon wieder Tränen in den Augen.?");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Es fühlt sich an als hätte ich eine unglaubliche Last in mir...");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Ich könnte einfach losheulen, jedesmal wenn ich aufwache.");
-    await ƒS.Speech.tell(dataForSave.namePlayer, "Ob das wohl normal ist? Erzählen möchte ich auch niemandem davon...ist ja peinlich.");
-    await ƒS.Speech.tell(dataForSave.namePlayer, "Ich frage mich, wann dieses tiefe Gefühl der leere endlich weichen wird.");
+    await ƒS.Speech.tell(dataForSave.namePlayer, "Ob das wohl normal ist?");
+    await ƒS.Speech.tell(dataForSave.namePlayer, "Ich frage mich, wann dieses Gefühl der leere endlich weichen wird.");
     await ƒS.Speech.tell(dataForSave.namePlayer, "Was könnte dieses Gefühl verursachen? Irgendwann muss ich auf eine Lösung kommen...");
     await ƒS.Location.show(locations.BadEnding); 
     await ƒS.update(transition.blurr.duration, transition.blurr.alpha, transition.blurr.edge);

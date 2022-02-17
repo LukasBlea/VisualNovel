@@ -11,14 +11,14 @@ namespace Template {
       await ƒS.update(0);
       await ƒS.Speech.tell(dataForSave.namePlayer, "Hey Leyah, ich bin wieder da!");
       await ƒS.Speech.tell(characters.Leyah, "Konntest du den Schlüssel finden?");
-      await ƒS.Speech.tell(dataForSave.namePlayer, "Nein den Schlüssel konnte ich leider nicht finden, allerdings einen seltsamen Stein mit inschriften...");
+      await ƒS.Speech.tell(dataForSave.namePlayer, "Nein den Schlüssel konnte ich leider nicht finden, allerdings ein Grabmal mit inschriften...");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Weißt du irgendwas darüber?");
       await ƒS.Speech.tell(characters.Leyah, "Diese Frage stellt du mir nicht das erste mal...");
       await ƒS.Speech.tell(characters.Leyah, "Weißt du eigentlich wo wir hier sind?");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Naja also...ehrlich gesagt bin ich mir nicht sicher. Das einzige woran ich mich erinnern kann ist mich ins Bett gelegt zu haben...");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Moment...");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Sag mir nicht ich befinde mich in einem T-");
-      await ƒS.Speech.tell(characters.Leyah, "Doch genau so ist es. Du befindest dich momentan in deinem eigenen Traum. Der Stein den du gesehen hast muss eine Manifestation deines Wunsches sein, den Schlüssel zu dieser Tür zu finden.");
+      await ƒS.Speech.tell(characters.Leyah, "Doch genau so ist es. Du befindest dich momentan in deinem eigenen Traum. Das Grabmal...beziehungsweise die Steintafel des Mals das du gesehen hast muss eine Manifestation deines Wunsches sein, den Schlüssel zu dieser Tür zu finden.");
       await ƒS.Speech.tell(characters.Leyah, "In Träumen werden einem die tiefen und unerkundeten Ecken des eigenen Kopfes zur schau gestellt.");
       await ƒS.Speech.tell(characters.Leyah, "Dinge an die du unterbewusst denkst.");
       await ƒS.Speech.tell(characters.Leyah, "Sorgen die du hast.");

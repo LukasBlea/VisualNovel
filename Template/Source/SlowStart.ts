@@ -41,7 +41,7 @@ namespace Template {
     let leyahChoice = {
       iSayGo: "Ich werde mein bestes geben, das verspreche ich dir!",
       iSayWait: "Könntest du mir vorher noch etwas mehr über dich erzählen?",
-      iSayNothing: "Weißt du, was es mit diesem Stein auf sich hat den ich vorher finden konnte?"
+      iSayNothing: "Weißt du, was es mit diesem Grabmal auf sich hat den ich vorher finden konnte?"
     };
     let secondDialougeElement = await ƒS.Menu.getInput(leyahChoice, "FirstDecisions");
     switch (secondDialougeElement) {
@@ -49,7 +49,7 @@ namespace Template {
         await ƒS.Speech.tell(characters.Leyah, "Dankeschön, das freut mich wirklich!");
         await ƒS.Speech.tell(characters.Leyah, "Hör zu, du musst dich umdrehen und zurück ins dunkle laufen.");
         await ƒS.Speech.tell(characters.Leyah, "Laufe bis du ein blaues Licht siehst.");
-        await ƒS.Speech.tell(dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diesen seltsamen Stein auffinden...");
+        await ƒS.Speech.tell(dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich dieses eigenartige Grabmal auffinden...");
         await ƒS.Speech.tell(characters.Leyah, "Es scheint ein Ort zu sein welcher dir helfen kann den Schlüssel zu finden.");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Aber...ich komme doch gerade von dort.");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Nun gut.");
@@ -62,15 +62,15 @@ namespace Template {
       case leyahChoice.iSayWait:
         return "LeyahBackground"
       case leyahChoice.iSayNothing:
-        await ƒS.Speech.tell(characters.Leyah, "Einen Stein?");
-        await ƒS.Speech.tell(characters.Leyah, "Nur du musst ihn sehen können, denn ich habe dich schon einmal darüber reden hören.");
-        await ƒS.Speech.tell(characters.Leyah, "Man spricht von einer Verkörperung des inneren Wunsch des T-...");
+        await ƒS.Speech.tell(characters.Leyah, "Ein Grabmal?");
+        await ƒS.Speech.tell(characters.Leyah, "Nur du musst es sehen können, denn ich habe dich schon einmal darüber reden hören.");
+        await ƒS.Speech.tell(characters.Leyah, "Man spricht bei diesem Mal von einer Verkörperung des inneren Wunsch des T-...");
         await ƒS.Speech.tell(characters.Leyah, "T-...T-...Trainers.");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Die Verkörperung des inneren Wunsches des Trainers?");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Dir ist bewusst, dass ich nichts von dem verstanden habe was du mir versucht hast zu vermitteln, oder?");
         await ƒS.Speech.tell(characters.Leyah, "Tut mir Leid, ich stoße an meine Grenzen. Mehr kann ich dazu nicht sagen.");
         await ƒS.Speech.tell(dataForSave.namePlayer, "Ein komisches Mädchen bist du...naja!");
-    // Selbe Frage, jedoch ohn Option "Weißt du, was es mit diesem Stein auf sich hat den ich vorher finden konnte?" --> evtl. sehr unpraktisch gelößt but it
+    // Selbe Frage, jedoch ohne Option "Weißt du, was es mit diesem Stein auf sich hat den ich vorher finden konnte?" --> evtl. sehr unpraktisch gelößt but it
         await ƒS.Speech.tell(characters.Leyah, "Jetzt nochmal: Möchtest du mir helfen und versuchen mich zu befreien?");
         let leyahChoice2 = {
           iSayGo: "Ich werde mein bestes geben, das verspreche ich dir!",
@@ -82,7 +82,7 @@ namespace Template {
             await ƒS.Speech.tell(characters.Leyah, "Dankeschön, das freut mich wirklich!");
             await ƒS.Speech.tell(characters.Leyah, "Hör zu, du musst dich umdrehen und zurück ins dunkle laufen.");
             await ƒS.Speech.tell(characters.Leyah, "Laufe bis du ein blaues Licht siehst.");
-            await ƒS.Speech.tell(dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diesen seltsamen Stein auffinden...");
+            await ƒS.Speech.tell(dataForSave.namePlayer, "Hey ich war schon an einem blauen Licht! Dort konnte ich diesen seltsame Grabmal auffinden...");
             await ƒS.Speech.tell(characters.Leyah, "Es scheint ein Ort zu sein welcher dir helfen kann den Schlüssel zu finden.");
             await ƒS.Speech.tell(dataForSave.namePlayer, "Aber...ich komme doch gerade von dort.");
             await ƒS.Speech.tell(dataForSave.namePlayer, "Nun gut.");

@@ -12,7 +12,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       await ƒS.update(0);
       await signalDelay();
       await ƒS.Speech.tell(dataForSave.namePlayer, "Es scheint so als hätte Leyah recht...ich sehe hier ein blaues Licht.");
-      await ƒS.Speech.tell(dataForSave.namePlayer, "Allerdings ist dieser Stein echt gruselig...sieht irgendwie verrückt aus.");
+      await ƒS.Speech.tell(dataForSave.namePlayer, "Allerdings ist dieser Grabmal echt gruselig...sieht irgendwie verrückt aus.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Und es scheint wirklich nicht das erste mal zu sein, dass ich nach einem Schlüssel für ihre Tür gesucht habe.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Allerdings sieht es so aus, als würde sich der Schlüssel nicht hier befinden.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Wenn ich hier schon öfter war und gesucht habe...was soll diesmal anders sein?");
@@ -21,7 +21,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       await ƒS.Speech.tell(dataForSave.namePlayer, "Komm schon " + dataForSave.namePlayer + " du kannst nicht jetzt schon aufgeben. Sie verlässt sich auf dich.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Ihr Geruch, ihre Stimme...alles an ihr kommt mir so vertraut vor.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Ich möchte sie nicht enttäuschen.");
-      await ƒS.Speech.tell(dataForSave.namePlayer, "Womöglich wäre es schlau sie zu fragen, was es mit diesem Stein hier auf sich hat.");
+      await ƒS.Speech.tell(dataForSave.namePlayer, "Womöglich wäre es schlau sie zu fragen, was es mit diesem Grabmal hier auf sich hat.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Sie sollte sich hier am besten auskennen. Immerhin hat sie schon viel Zeit hier verbringen müssen wie es scheint.");
       let askLeyah = {
         iSayGo: "Ich mache mich auf den Weg zurück zu ihrer Tür. Sie wird mir helfen können.",
@@ -105,7 +105,7 @@ let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.dela
       await ƒS.Speech.tell(dataForSave.namePlayer, "Dies ist wirklich ein seltsamer Ort.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Scheint als hätte jemand seine Schlüssel verloren.");
       await ƒS.Speech.tell(dataForSave.namePlayer, "Hahahaha.");
-      await ƒS.Speech.tell(dataForSave.namePlayer, "Aber wieso einen Stein nehmen und dort denselben Satz immer und immer wieder draufschreiben?");
+      await ƒS.Speech.tell(dataForSave.namePlayer, "Aber wieso ein Grabmal nehmen auf dessen Tafel denselben Satz immer und immer wieder draufschreiben?");
       await ƒS.Speech.tell(dataForSave.namePlayer, "......");
       await ƒS.Speech.tell(dataForSave.namePlayer, "HALLO? IST HIER JEMAND?");
       let signalDelay: ƒS.Signal = ƒS.Progress.defineSignal([() => ƒS.Progress.delay(2)])

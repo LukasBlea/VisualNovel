@@ -228,7 +228,7 @@ var Template;
         await Template.ƒS.Speech.tell(Template.dataForSave.namePlayer, "Ich kann mich nicht daran erinnern jemals hier gewesen zu sein.");
         await Template.ƒS.Speech.tell(Template.characters.Leyah, "Es tut mir leid...ich kann dir nicht mehr sagen.");
         await Template.ƒS.Speech.tell(Template.characters.Leyah, "Möchtest du mir trotzdem helfen und versuchen mich zu befreien?");
-        if (Template.dataForSave.slowStart == false) {
+        if (Template.dataForSave.slowStart == true) {
             let leyahChoice = {
                 iSayGo: "Ich werde mein bestes geben, das verspreche ich dir!",
                 iSayNo: "Nein tut mir leid, ich werde dir nicht helfen."

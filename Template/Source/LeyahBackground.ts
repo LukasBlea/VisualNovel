@@ -20,7 +20,7 @@ namespace Template {
     await ƒS.Speech.tell(dataForSave.namePlayer, "Ich kann mich nicht daran erinnern jemals hier gewesen zu sein.");
     await ƒS.Speech.tell(characters.Leyah, "Es tut mir leid...ich kann dir nicht mehr sagen.");
     await ƒS.Speech.tell(characters.Leyah, "Möchtest du mir trotzdem helfen und versuchen mich zu befreien?");
-    if (dataForSave.slowStart == false) {
+    if (dataForSave.slowStart == true) {
       let leyahChoice = {
         iSayGo: "Ich werde mein bestes geben, das verspreche ich dir!",
         iSayNo: "Nein tut mir leid, ich werde dir nicht helfen."
